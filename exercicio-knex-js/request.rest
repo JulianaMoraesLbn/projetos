@@ -1,0 +1,25 @@
+
+GET http://localhost:3003/actor
+
+###
+
+GET http://localhost:3003/actor/001
+
+###
+
+GET http://localhost:3003/actor/busca/nome/Juliana
+
+###
+
+GET http://localhost:3003/actor/busca/genero/female
+
+###
+DELETE http://localhost:3003/actor/excluir/002
+
+###
+
+GET http://localhost:3003/movie/all
+
+###
+
+GET http://localhost:3003/movie/search?query=gus
