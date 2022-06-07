@@ -7,52 +7,67 @@ import GlobalStateContext from "./GlobalStateContext";
 const GlobalState = (props) => {
 
     const [allPokemon, setAllPokemon] = useState([])
-    const [onePokemon, setOnePokemon] = useState([])
     const [pokeName, setPokeName] = useState([])
     const [pokemonList, setPokemonList] = useState([])
 
-    useEffect(()=>{
+    useEffect(() => {
         getAllPokemon()
-    },[])
+    }, [])
 
-    useEffect(()=>{
+    useEffect(() => {
         const listName = []
         const arrayPokemons = []
 
-        allPokemon.forEach((pokemon)=>{
-            listName.push(pokemon.name)
-            
-            axios.get(`${BASE_URL}/pokemon/${pokemon.name}`)
-            .then((resp)=>{
-                arrayPokemons.push(resp.data)
-                setOnePokemon(resp.data)
-            })
-            .catch((err)=>{
-                alert('Erro: ', err) 
-            })
-        })
+        const fetch = async () => {
+            for (let pokemon of allPokemon) {
+                listName.push(pokemon.name)
 
-        setPokeName(listName)
-        setPokemonList(arrayPokemons)
-    },[allPokemon])
+                //declarei variavel que é um objeto que ter a propriedade data {data} ou resp (teria resp.data)
 
-    // console.log(pokemonList)
+                const { data } = await axios.get(`${BASE_URL}/pokemon/${pokemon.name}`)
+                arrayPokemons.push(data)
+            }
 
-    const getAllPokemon = () =>{
-        
+            setPokeName(listName)
+            setPokemonList(arrayPokemons)
+        }
+
+        fetch()
+
+        // allPokemon.forEach((pokemon)=>{
+        //     listName.push(pokemon.name)
+
+        //     axios.get(`${BASE_URL}/pokemon/${pokemon.name}`)
+        //     .then((resp)=>{
+        //         arrayPokemons.push(resp.data)
+        //         // setOnePokemon(resp.data)
+        //     })
+        //     .catch((err)=>{
+        //         alert('Erro: ', err) 
+        //     })
+        // })
+
+
+
+
+    }, [allPokemon])
+
+    const getAllPokemon = () => {
+
         axios.get(`${BASE_URL}/pokemon?limit=50`)
-        .then((resp)=>{
-            setAllPokemon(resp.data.results)
-            
-        })
-        .catch((err)=>{console.log(err)})
+            .then((resp) => {
+                setAllPokemon(resp.data.results)
+
+            })
+            .catch((err) => { console.log(err) })
     }
 
-    const data = {pokeName,setPokeName, pokemonList, setPokemonList}
+    console.log(pokemonList)
+    const data = { pokeName, setPokeName, pokemonList, setPokemonList }
 
-    
 
-    return(
+
+    return (
         <GlobalStateContext.Provider value={data} >
             {props.children}
         </GlobalStateContext.Provider>

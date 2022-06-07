@@ -12,6 +12,7 @@ const Home = () => {
 
     const {pokeName,setPokeName, pokemonList, setPokemonList} = useContext(GlobalStateContext)
 
+
     const renderPokeList = pokemonList.map((pokemon)=>{
         // console.log(pokemon.types[0].type.name)
         let color = ''
@@ -56,7 +57,7 @@ const Home = () => {
         <HomeContainer>
             <Header />
             <HomeListContainer>
-                {renderPokeList}
+                {renderPokeList.length? renderPokeList: <p>Carregando...</p>}
             </HomeListContainer>
         </HomeContainer>
     )
