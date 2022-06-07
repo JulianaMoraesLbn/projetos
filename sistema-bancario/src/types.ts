@@ -1,15 +1,15 @@
-export type detalheExtrato = {
+export type DetalheExtrato = {
     valor: number,
     data: string,
     descricao: string
 }
 
 
-export type conta = {
+export type Conta = {
     nome: string,
     cpf: string,
     dataNascimento: string,
     saldo: number,
-    extrato: detalheExtrato[]
+    extrato: DetalheExtrato[]
 }
 

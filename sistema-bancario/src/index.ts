@@ -2,7 +2,7 @@ import express, { Request, Response } from 'express'
 import cors from 'cors'
 import { AddressInfo } from 'net'
 import { contas } from './contas'
-import { conta } from './types'
+import { Conta } from './types'
 
 const app = express()
 app.use(express.json())
@@ -109,7 +109,7 @@ app.post('/contas', (req: Request, res: Response) => {
             throw new Error(erros.DADOS_AUSENTES.message)
         }
 
-        const novaConta: conta = {
+        const novaConta: Conta = {
             nome,
             cpf,
             dataNascimento,
@@ -298,7 +298,7 @@ const server = app.listen(process.env.PORT || 3003, () => {
 
     if (server) {
         const address = server.address() as AddressInfo
-        console.log(`Servidor rodando na porta http://localhost: ${address.port}`)
+        console.log("Servidor rodando")
     } else {
         console.error(`Falha na inicialização do servidor`)
     }
