@@ -1,0 +1,26 @@
+[
+    {
+        "id" : "001",
+		"name" : "Juliana",
+		"email" : "juliana@email.com",
+		"password" : "123abc456"
+    },
+    {
+        "id" : "002",
+		"name" : "Livia",
+		"email" : "livia@email.com",
+		"password" : "456def789"
+    },
+    {
+        "id" : "003",
+		"name" : "Gustavo",
+		"email" : "gustavo@email.com",
+		"password" : "101112ghi131415"
+    },
+    {
+        "id" : "004",
+		"name" : "Jose",
+		"email" : "jose@email.com",
+		"password" : "123aabbcc123"
+    }
+]
