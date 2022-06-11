@@ -1,0 +1,57 @@
+[
+    {
+        "id": "0001",
+		"name": "lapis",
+		"price": 1.00,
+		"image_url": "https://images.tcdn.com.br/img/img_prod/808210/lapis_preto_sextavado_pastel_line_molin_62075387_1_cb4138e7949d75f4c1b8c34eecaca3ac.jpg"
+    },
+    {
+        "id": "0002",
+		"name": "caneta-vermelha",
+		"price": 2.00,
+		"image_url": "https://img.kalunga.com.br/fotosdeprodutos/176340z_2.jpg"
+    },
+    {
+        "id": "0003",
+		"name": "caneta-azul",
+		"price": 2.00,
+		"image_url": "https://d2byg56fbf6u3p.cloudfront.net/1066/imagens/106698842525ff713dc605853.12903055.1610027996_l.jpg"
+    },
+    {
+        "id": "0004",
+		"name": "Papel Sulfite 75g",
+		"price": 26.90,
+		"image_url": "https://img.kalunga.com.br/fotosdeprodutos/476102d.jpg"
+    },
+    {
+        "id": "0005",
+		"name": "Bloco de Notas Adesivas Post-it ",
+		"price": 42.40,
+		"image_url": "https://img.kalunga.com.br/fotosdeprodutos/041148d.jpg"
+    },
+    {
+        "id": "0006",
+		"name": "Post-it Bloco Unitario ",
+		"price": 5.00,
+		"image_url": "https://img.kalunga.com.br/fotosdeprodutos/041148d.jpg"
+    },
+    {
+        "id": "0007",
+		"name": "Calculadora de mesa",
+		"price": 35.50,
+		"image_url": "https://img.kalunga.com.br/fotosdeprodutos/159003d.jpg"
+    },
+    {
+        "id": "0008",
+		"name": "Lápis de Cor 48 cores",
+		"price": 37.30,
+		"image_url": "https://img.kalunga.com.br/fotosdeprodutos/389064d.jpg"
+    },
+    {
+        "id": "0009",
+		"name": "Fichário Universitário Neon",
+		"price": 72.90,
+		"image_url": "https://img.kalunga.com.br/fotosdeprodutos/293812d.jpg"
+    }
+    
+]
